@@ -6,7 +6,10 @@ from sentence_transformers import SentenceTransformer, util
 # Load model once
 MODEL_NAME = "all-MiniLM-L6-v2"
 device = "cuda" if torch.cuda.is_available() else "cpu"
-embedder_model = SentenceTransformer(MODEL_NAME, device=device)
+def load_model():
+    return SentenceTransformer(MODEL_NAME)   # don’t push to device (GPU not supported)
+
+embedder_model = load_model()
 
 st.set_page_config(page_title="Relevance Checker", layout="centered")
 
