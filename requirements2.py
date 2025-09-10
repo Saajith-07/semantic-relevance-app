@@ -1,0 +1,6 @@
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
+torchaudio==2.0.2+cpu
+-f https://download.pytorch.org/whl/cpu/torch_stable.html
+sentence-transformers
+streamlit
